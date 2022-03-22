@@ -153,6 +153,9 @@ cython_debug/
 
 # Catbost
 **/catboost_info
+
+# Data
 data/*
+files/*
 
 !**/.gitkeep

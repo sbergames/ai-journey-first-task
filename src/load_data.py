@@ -9,7 +9,7 @@ BASE_DIR = Path(__file__).parents[1]
 def sql_download(sql: str, table_name) -> None:
     df = pd.read_gbq(sql, project_id='prostokvashino-m3', progress_bar_type='tqdm')
     df = df.drop(columns=['device_OS', 'device_id'], errors='ignore')
-    save_path = BASE_DIR / 'data' / f"{table_name}.csv"
+    save_path = BASE_DIR / 'files' / f"{table_name}.csv"
     df.to_csv(save_path)
 
 
